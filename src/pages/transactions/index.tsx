@@ -11,6 +11,7 @@ import { TransactionsContext } from '../../contexts/transactions-context'
 
 export function Transactions() {
   const { transactions } = useContext(TransactionsContext)
+
   return (
     <div>
       <Header />

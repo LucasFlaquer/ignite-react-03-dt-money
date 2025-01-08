@@ -40,6 +40,14 @@
     "category": "Venda",
     "price": 2000,
     "createdAt": "2025-01-20T11:20:10.000Z"
+  },
+  {
+    "id": 6,
+    "description": "Venda de software",
+    "type": "outcome",
+    "category": "Estudos",
+    "price": 160,
+    "createdAt": "2025-01-20T11:20:10.000Z"
   }
   ]
 }
