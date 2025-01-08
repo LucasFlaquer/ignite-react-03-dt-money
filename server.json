@@ -1,0 +1,45 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 1400,
+      "createdAt": "2025-01-08T13: 50: 50.565Z"
+    }
+  ,
+  {
+    "id": 2,
+    "description": "Compra de equipamento",
+    "type": "outcome",
+    "category": "Compra",
+    "price": 800,
+    "createdAt": "2025-01-10T09:30:00.000Z"
+  },
+  {
+    "id": 3,
+    "description": "Consultoria",
+    "type": "income",
+    "category": "Serviço",
+    "price": 500,
+    "createdAt": "2025-01-12T15:45:30.000Z"
+  },
+  {
+    "id": 4,
+    "description": "Aluguel",
+    "type": "outcome",
+    "category": "Despesa",
+    "price": 1200,
+    "createdAt": "2025-01-15T08:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "description": "Venda de software",
+    "type": "income",
+    "category": "Venda",
+    "price": 2000,
+    "createdAt": "2025-01-20T11:20:10.000Z"
+  }
+  ]
+}
