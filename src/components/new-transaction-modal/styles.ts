@@ -48,9 +48,14 @@ export const Content = styled(Dialog.Content)`
       margin-top: 1.5rem;
       cursor: pointer;
 
-      &:hover {
+      &:not(:disabled):hover {
         background: ${({ theme }) => theme['green-700']};
         transition: background 0.2s;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
       }
     }
   }
@@ -101,13 +106,14 @@ export const TransactionTypeButton = styled(RadioGroup.Item)<TransactionTypeButt
     transition: background-color 0.2s;
     background: ${({ theme }) => theme['gray-600']};
   }
-  
+
   &[data-state='checked'] {
     color: ${({ theme }) => theme.white};
     background: ${({ theme, variant }) =>
       variant === 'income' ? theme['green-500'] : theme['red-500']};
 
     svg {
-      color: ${(props) => props.theme.white}
+      color: ${(props) => props.theme.white};
     }
+  }
 `

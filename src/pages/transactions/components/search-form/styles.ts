@@ -30,7 +30,7 @@ export const Container = styled.form`
     font-weight: bold;
     border-radius: 6px;
 
-    &:hover {
+    &:not(:disabled):hover {
       background: ${({ theme }) => theme['green-500']};
       border: 1px solid ${({ theme }) => theme['green-500']};
       color: ${(props) => props.theme.white};
@@ -38,6 +38,11 @@ export const Container = styled.form`
         backgroud-color 0.2s,
         color 0.2s,
         border 0.2s;
+    }
+    &:disabled {
+      opacity: 0.6;
+
+      cursor: not-allowed;
     }
   }
 `
