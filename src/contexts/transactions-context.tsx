@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useEffect, useState } from 'react'
+import { api } from '../lib/api'
 
 interface Transaction {
   id: number
@@ -24,15 +25,12 @@ export function TransactionsProvider({ children }: ProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([])
 
   async function fetchTransactions(query?: string) {
-    const url = new URL('http://localhost:3000/transactions')
-    if (query) {
-      url.searchParams.append('q', query)
-    }
-    console.log('fetching transactions', url)
-    const response = await fetch(url)
-    const data = await response.json()
-    console.log('fetched transactions->', data)
-    setTransactions(data)
+    const response = await api.get('/transactions', {
+      params: {
+        q: query,
+      },
+    })
+    setTransactions(response.data)
   }
 
   useEffect(() => {
